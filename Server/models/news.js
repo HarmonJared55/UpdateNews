@@ -14,10 +14,7 @@ const NewsSchema = new Schema({
     type: String,
     required: true,
   },
-  story: {
-    type: String,
-    required: true,
-  },
+
   urlToImage: {
     type: String,
     required: true,
