@@ -15,10 +15,10 @@ module.exports = function validateUserInput(data) {
     errors.name = "Name field is required";
   }
   if (Validator.isEmpty(data.email)) {
-    errors.name = "Email field is required";
+    errors.email = "Email field is required";
   }
   if (!Validator.isEmail(data.email)) {
-    errors.name = "Email field must in proper email format";
+    errors.email = "Email field must in proper email format";
   }
   if (Validator.isEmpty(data.password)) {
     errors.password = "Password field is required";

@@ -41,10 +41,10 @@ router.post("/register", (req, res) => {
 });
 
 router.post("/login", (req, res) => {
-  const { name } = req.body;
+  const { email } = req.body;
   const { password } = req.body;
 
-  User.findOne({ name })
+  User.findOne({ email })
     .then((user) => {
       if (!user) {
         res.status(400).json({ msg: "user not found" });
