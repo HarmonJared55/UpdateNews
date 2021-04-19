@@ -21,8 +21,7 @@ router.post("/register", (req, res) => {
     url: req.body.url,
     urlToImage: req.body.urlToImage,
     publishedAt: req.body.publishedAt,
-    isSports: req.body.isSports,
-    story: req.body.story,
+    isSports: req.body.isSports
   });
 
   newNews
