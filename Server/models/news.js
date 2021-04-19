@@ -20,8 +20,8 @@ const NewsSchema = new Schema({
     required: true,
   },
   publishedAt: {
-    type: String,
-    required: true,
+    type: Date,
+    default: Date.now(),
   },
   isSports: {
     type: Boolean,

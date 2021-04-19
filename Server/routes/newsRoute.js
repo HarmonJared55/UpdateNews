@@ -5,7 +5,18 @@ const News = require("../models/news");
 
 router.get("/all", (req, res) => {
   News.find()
-    .then((newss) => res.json(newss))
+    .then((news) => res.json(news))
+    .catch();
+});
+
+router.get("/latestThree", (req, res) => {
+  News.find({"isSports":false}).sort({"publishedAt":-1}).limit(3)
+    .then((news) => res.json(news))
+    .catch();
+});
+router.get("/latestThreeSports", (req, res) => {
+  News.find({"isSports":true}).sort({"publishedAt":-1}).limit(3)
+    .then((news) => res.json(news))
     .catch();
 });
 
