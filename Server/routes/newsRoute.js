@@ -8,7 +8,16 @@ router.get("/all", (req, res) => {
     .then((news) => res.json(news))
     .catch();
 });
-
+router.get("/allRegularNews", (req, res) => {
+  News.find({"isSports":false})
+    .then((news) => res.json(news))
+    .catch();
+});
+router.get("/allSportsNews", (req, res) => {
+  News.find({"isSports":true})
+    .then((news) => res.json(news))
+    .catch();
+});
 router.get("/latestThree", (req, res) => {
   News.find({"isSports":false}).sort({"publishedAt":-1}).limit(3)
     .then((news) => res.json(news))
