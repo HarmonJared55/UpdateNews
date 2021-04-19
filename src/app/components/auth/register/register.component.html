@@ -24,7 +24,7 @@
                 *ngIf="f.submitted && name.invalid"
                 class="d-block invalid-feedback"
               >
-                <div *ngIf="name.errors.required">Name is required</div>
+                <div *ngIf="name.errors?.required">Name is required</div>
               </div>
             </div>
   
@@ -44,8 +44,8 @@
                 *ngIf="f.submitted && email.invalid"
                 class="d-block invalid-feedback"
               >
-                <div *ngIf="email.errors.required">Email is required</div>
-                <div *ngIf="email.errors.email">
+                <div *ngIf="email.errors?.required">Email is required</div>
+                <div *ngIf="email.errors?.email">
                   Enter a valid email address. e.g. john@example.com
                 </div>
               </div>
@@ -66,8 +66,8 @@
                 *ngIf="f.submitted && password.invalid"
                 class="invalid-feedback"
               >
-                <div *ngIf="password.errors.required">Password is required</div>
-                <div *ngIf="password.errors.minlength">
+                <div *ngIf="password.errors?.required">Password is required</div>
+                <div *ngIf="password.errors?.minlength">
                   Password must be at least 6 characters
                 </div>
               </div>

@@ -8,13 +8,15 @@ import { LoginComponent } from './components/auth/login/login.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AboutUsComponent } from './components/pages/about-us/about-us.component';
-
+import { ImgSliderComponent } from './components/img-slider/img-slider.component';
+import { NgImageSliderModule} from 'ng-image-slider';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    ImgSliderComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,8 @@ import { AboutUsComponent } from './components/pages/about-us/about-us.component
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgImageSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
