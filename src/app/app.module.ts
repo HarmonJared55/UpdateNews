@@ -11,6 +11,8 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { NavBarComponent } from './components/layout/nav-bar/nav-bar.component';
 import { WeatherComponent } from './components/weather/weather.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { ImageSliderComponent } from './components/image-slider/image-slider.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     HeaderComponent,
     NavBarComponent,
     WeatherComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ImageSliderComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
