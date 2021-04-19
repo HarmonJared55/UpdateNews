@@ -10,13 +10,19 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AboutUsComponent } from './components/pages/about-us/about-us.component';
 import { ImgSliderComponent } from './components/img-slider/img-slider.component';
 import { NgImageSliderModule} from 'ng-image-slider';
+import { FooterComponent } from './components/layout/footer/footer.component';
+import { HeaderComponent } from './components/layout/header/header.component';
+import { NavBarComponent } from './components/layout/nav-bar/nav-bar.component';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
     AboutUsComponent,
-    ImgSliderComponent
+    ImgSliderComponent,
+    FooterComponent,
+    HeaderComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
