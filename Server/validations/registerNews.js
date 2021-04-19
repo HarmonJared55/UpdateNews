@@ -7,7 +7,6 @@ module.exports = function validateNewsInput(data) {
   data.description = !isEmpty(data.description) ? data.description : "";
   data.url = !isEmpty(data.url) ? data.url : "";
   data.urlToImage = !isEmpty(data.urlToImage) ? data.urlToImage : "";
-  data.publishedAt = !isEmpty(data.publishedAt) ? data.publishedAt : "";
   
 
   if (Validator.isEmpty(data.title)) {
@@ -21,9 +20,6 @@ module.exports = function validateNewsInput(data) {
   }
   if (Validator.isEmpty(data.urlToImage)) {
     errors.urlToImage = "Url to image field is required";
-  }
-  if (Validator.isEmpty(data.publishedAt)) {
-    errors.publishedAt = "Published at field is required";
   }
  
 
