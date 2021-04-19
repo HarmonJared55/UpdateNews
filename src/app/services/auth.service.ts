@@ -6,7 +6,7 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  api: string = 'placeholder';
+  api: string = 'http://localhost:3000/api/users';
   subject: Subject<string> = new Subject<string>();
   constructor(private httpClient: HttpClient) { }
 
