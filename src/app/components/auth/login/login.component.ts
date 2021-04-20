@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.model).subscribe((res) => {
       console.log(JSON.stringify(res));
       localStorage.setItem('token', res.token);
-      this.router.navigate(['/task']);
+      this.router.navigate(['/home']);
     });
     this.submitted = true;
   }

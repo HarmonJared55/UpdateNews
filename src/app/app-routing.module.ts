@@ -4,7 +4,7 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { AboutUsComponent } from './components/pages/about-us/about-us.component';
-
+import {AuthGuard} from './guards/auth.guard';
 const routes: Routes = [
   {
     path: 'login', 
@@ -21,6 +21,7 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactUsComponent,
+    canActivate: [AuthGuard],
   }
 ];
 
