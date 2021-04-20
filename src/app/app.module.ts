@@ -50,7 +50,8 @@ import { RegisterNewsComponent } from './components/EditNews/register-news/regis
     EditNewsItemComponent,
     LatestNewsComponent,
     NewsSearchPipe,
-    RegisterNewsComponent
+    RegisterNewsComponent,
+    LatestNewsComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +60,15 @@ import { RegisterNewsComponent } from './components/EditNews/register-news/regis
     FormsModule,
     NgImageSliderModule,
     AgmCoreModule.forRoot({ apiKey: 'AIzaSyD1kPG9I5B9X_ew1SddKZ3QFALTPLB4pIk' })
+    
+    
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    NgImageSliderModule
     
   ],
   providers: [],
