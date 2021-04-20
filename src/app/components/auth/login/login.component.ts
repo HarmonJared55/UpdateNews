@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
+import jwt_decode from 'jwt-decode';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,16 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.model).subscribe((res) => {
       console.log(JSON.stringify(res));
       localStorage.setItem('token', res.token);
-      this.router.navigate(['/homePage']);
+      const token = localStorage.token;
+      if(token){
+        const decodedToken: any = jwt_decode(token);
+        if(decodedToken.isAdmin){
+          this.router.navigate(['/edit-news']);
+        }else{
+          this.router.navigate(['/homePage']);
+        }
+      }
+      
     });
     this.submitted = true;
   }
