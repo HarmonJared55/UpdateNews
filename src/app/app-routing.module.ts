@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 import { EditNewsComponent } from './components/EditNews/edit-news/edit-news.component';
 import { AdminGuard } from './guards/admin.guard';
 import { AboutUsComponent } from './components/pages/about-us/about-us.component';
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactUsComponent
+  },
+  {
+    path: 'homePage',
+    component: HomePageComponent
   },
   {
     path:'edit-news',
