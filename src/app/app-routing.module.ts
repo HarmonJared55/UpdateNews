@@ -12,6 +12,7 @@ import { EditNewsItemComponent } from './components/EditNews/edit-news-item/edit
 
 import {AuthGuard} from './guards/auth.guard';
 import { RegisterNewsComponent } from './components/EditNews/register-news/register-news.component';
+import { ChatComponent } from './components/chat/chat.component';
 const routes: Routes = [
   {
     path: '', 
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: 'sports',
     component: SportsComponent
+  },
+  {
+    path: 'chat',
+    component: ChatComponent
   },
   {
     path:'edit-news',
