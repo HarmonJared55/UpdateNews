@@ -49,15 +49,6 @@ import { LatestNewsComponent } from './components/latest-news/latest-news.compon
     EditNewsItemComponent,
     LatestNewsComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule, 
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    NgImageSliderModule
-  ],
   providers: [],
   bootstrap: [AppComponent]
 })

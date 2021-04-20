@@ -28,7 +28,6 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactUsComponent,
-    canActivate: [AuthGuard],
    
   },
   {
