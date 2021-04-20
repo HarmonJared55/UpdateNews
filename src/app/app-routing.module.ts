@@ -8,6 +8,7 @@ import { EditNewsComponent } from './components/EditNews/edit-news/edit-news.com
 import { AdminGuard } from './guards/admin.guard';
 import { AboutUsComponent } from './components/pages/about-us/about-us.component';
 import { SportsComponent } from './components/sports/sports.component';
+import { EditNewsItemComponent } from './components/EditNews/edit-news-item/edit-news-item.component';
 
 import {AuthGuard} from './guards/auth.guard';
 const routes: Routes = [
@@ -37,14 +38,19 @@ const routes: Routes = [
     component: HomePageComponent
   },
   {
-    path:'edit-news',
-    component: EditNewsComponent,
-    canActivate:[AdminGuard]
-  },
-  {
     path: 'sports',
     component: SportsComponent
-  }
+  },
+  {
+    path:'edit-news',
+    component: EditNewsComponent,
+   canActivate:[AdminGuard]
+  },
+  {
+    path:'edit-news-item/:_id',
+    component: EditNewsItemComponent,
+   canActivate:[AdminGuard]
+  },
 ];
 
 @NgModule({
