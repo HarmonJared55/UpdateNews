@@ -12,4 +12,8 @@ api: string = 'http://localhost:3000/api/news/'
   getAllNews():Observable<any>{
     return this.httpClient.get(this.api + "all");
   }
+
+  getLatestThree():Observable<any>{
+    return this.httpClient.get(this.api + "latestThree")
+  }
 }
