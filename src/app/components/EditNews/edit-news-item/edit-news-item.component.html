@@ -1,1 +1,90 @@
-<p>edit-news-item works!</p>
+
+
+<div class="container" style="margin:50px">
+    <div class="row">
+      <div class="col-md-8 m-auto">
+        <h3 class="display-4 text-center">Edit News</h3>
+        <form
+          name="form"
+          (ngSubmit)="f.form.valid && handleSubmit()"
+          #f="ngForm"
+          novalidate
+        >
+          <div class="form-group" style="margin-top:20px">
+            <label>Title</label>
+            <input
+              type="text"
+              name="title"
+              class="form-control"
+              [(ngModel)]="initial.title"
+              #title="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && title.invalid }"
+              required
+            />
+            <div
+              *ngIf="f.submitted && title.invalid"
+              class="d-block invalid-feedback"
+            >
+              <div *ngIf="title.errors?.required">Title is required</div>
+            </div>
+          </div>
+          <div class="form-group" style="margin-top:20px">
+            <label>Description</label>
+            <input
+              type="text"
+              name="description"
+              class="form-control"
+              [(ngModel)]="initial.description"
+              #description="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && description.invalid }"
+              required
+            />
+            <div *ngIf="f.submitted && description.invalid" class="invalid-feedback">
+              <div *ngIf="description.errors?.required">description is required</div>
+              
+            </div>
+          </div>
+          <div class="form-group" style="margin-top:20px">
+            <label>URL</label>
+            <input
+              type="url"
+              name="url"
+              class="form-control"
+              [(ngModel)]="initial.url"
+              #url="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && url.invalid }"
+              required
+            />
+            <div *ngIf="f.submitted && url.invalid" class="invalid-feedback">
+              <div *ngIf="url.errors?.required">URL is required</div>
+              
+            </div>
+          </div>
+          <div class="form-group" style="margin-top:20px">
+            <label>URL To Image</label>
+            <input
+              type="urlToImage"
+              name="urlToImage"
+              class="form-control"
+              [(ngModel)]="initial.urlToImage"
+              #urlToImage="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && urlToImage.invalid }"
+              required
+            />
+            <div *ngIf="f.submitted && urlToImage.invalid" class="invalid-feedback">
+              <div *ngIf="urlToImage.errors?.required">URL to image is required</div>
+              
+            </div>
+          </div>
+          <div class="form-group form-check" style="margin-top: 20px;">
+              <input type="checkbox" name="isSports" id="isSports" class="form-check-input" [(ngModel)]="initial.isSports" #isSports="ngModel"/>
+            <label for="isSports" class="form-check-label">Sports News</label>
+            </div>
+          <div class="text-center">
+            <button style="margin:30px;" class="btn btn-primary mr-1">Confirm</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

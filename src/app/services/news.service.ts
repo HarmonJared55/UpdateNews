@@ -33,4 +33,18 @@ export class NewsService {
     return this.httpClient.post(this.api + '/register', register);
   }
 
+  updateNews(news:any):Observable<any>{
+    return this.httpClient.put(this.api + "update", news);
+  }
+
+  deleteNews(_id:any):Observable<any>{
+    console.log("News Service: " + _id._id);
+    return this.httpClient.delete(this.api + "delete",_id);
+  }
+
+  findNewsById(_id:any):Observable<any>{
+
+    console.log("News Service: " + _id);
+    return this.httpClient.get(this.api + "find/"+_id);
+  }
 }
