@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { EditNewsComponent } from './components/EditNews/edit-news/edit-news.component';
+import { AdminGuard } from './guards/admin.guard';
 import { AboutUsComponent } from './components/pages/about-us/about-us.component';
 
 const routes: Routes = [
@@ -20,7 +22,12 @@ const routes: Routes = [
   },
   {
     path: 'contact',
-    component: ContactUsComponent,
+    component: ContactUsComponent
+  },
+  {
+    path:'edit-news',
+    component: EditNewsComponent,
+    canActivate:[AdminGuard]
   }
 ];
 
