@@ -54,7 +54,7 @@ import { LatestNewsComponent } from './components/latest-news/latest-news.compon
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    
+    NgImageSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

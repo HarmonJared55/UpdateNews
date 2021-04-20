@@ -47,6 +47,7 @@ const routes: Routes = [
     component: SportsComponent
   },
   {
+    path:'edit-news',
     component: EditNewsComponent,
    //canActivate:[AdminGuard]
   },

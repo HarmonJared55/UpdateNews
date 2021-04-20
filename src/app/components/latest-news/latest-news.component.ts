@@ -21,9 +21,11 @@ export class LatestNewsComponent implements OnInit {
         let id = res[index]._id;
         let title = res[index].title;
         let description = res[index].description;
+        let url = res[index].url;
         let urlToImage = res[index].urlToImage;
+        let publishedAt = new Date(res[index].publishedAt);
         let isSports = res[index].isSports;
-        this.news.push(new News(id,title,description,urlToImage,isSports));
+        this.news.push(new News(id,title,description,url,urlToImage,publishedAt,isSports));
       }
       console.log(this.news);
     })
