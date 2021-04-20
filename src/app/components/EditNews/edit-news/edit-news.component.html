@@ -1,1 +1,42 @@
-<p>edit-news works!</p>
+<style>
+    .editbutton {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;}
+  .deletebutton {
+  background-color: #af4c4c; 
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+</style>
+
+<h1 style="margin:20px">Admin Edit News</h1>
+
+<table class="table table-striped" style="text-align:center;margin:30px;width:75%;">
+    <thead>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Published At</th>
+    <th></th>
+    <th></th>
+</thead>
+<tbody>
+    <tr *ngFor="let i of newsList">
+        <td>{{i.title}}</td>
+        <td>{{i.description}}</td>
+        <td>{{i.publishedAt | date:"mediumDate"}}</td>
+        <td><a class="editbutton" id="{{i._id}}" routerLink="/edit-news-item/{{i._id}}">Edit</a></td>
+        <td><button class="deletebutton" id="{{i._id}}" (click)="DeleteNews($event)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
