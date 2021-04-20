@@ -9,7 +9,7 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { LoginComponent } from './components/auth/login/login.component';
 import { ReactiveFormsModule} from '@angular/forms';
 import { AboutUsComponent } from './components/pages/about-us/about-us.component';
-import { ImgSliderComponent } from './components/img-slider/img-slider.component';
+
 import { NgImageSliderModule} from 'ng-image-slider';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { HeaderComponent } from './components/layout/header/header.component';
@@ -25,13 +25,14 @@ import { SportsComponent } from './components/sports/sports.component';
 import { LatestNewsComponent } from './components/latest-news/latest-news.component';
 import { NewsSearchPipe } from './pipes/news-search.pipe';
 
+import { AgmCoreModule } from '@agm/core';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
     AboutUsComponent,
-    ImgSliderComponent,
+    
     FooterComponent,
     HeaderComponent,
     NavBarComponent,
@@ -56,7 +57,9 @@ import { NewsSearchPipe } from './pipes/news-search.pipe';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    AgmCoreModule.forRoot({ apiKey: 'AIzaSyD1kPG9I5B9X_ew1SddKZ3QFALTPLB4pIk' })
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

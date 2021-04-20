@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-us.component.css']
 })
 export class AboutUsComponent implements OnInit {
+  title = 'Angular Google Maps Example';
+
+  lat = 19.07;
+  lng = 72.87;
+ 
 
   constructor() { }
 
