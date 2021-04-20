@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const validateNewsInput = require("../validations/registerNews");
 const News = require("../models/news");
+const params = require("params");
 
 router.get("/all", (req, res) => {
   News.find()
@@ -36,10 +37,17 @@ router.delete("/delete", (req, res) => {
     .catch();
 });
 
-router.get("/find", (req, res) => {
-  const{_id}=req.body;
-console.log("News Route: " + JSON.stringify(req.body));
+router.get("/find/:_id", (req, res) => {
+  const _id = req.params._id;
+  console.log("News Route: " + _id);
   News.findOne({_id})
+    .then((news) => res.json(news))
+    .catch();
+}); 
+
+router.put("/update", (req, res) => {
+  console.log("Updating: " + JSON.stringify(req.body));
+  News.update({'_id':req.body._id}, {$set:{'title':req.body.title}})
     .then((news) => res.json(news))
     .catch();
 });

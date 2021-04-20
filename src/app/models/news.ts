@@ -15,6 +15,6 @@ export class News {
         this.urlToImage=urlToImage;
         this.publishedAt=publishedAt;
         this.isSports=isSports;
-
+        
     }
 }

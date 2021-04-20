@@ -24,8 +24,8 @@ export class EditNewsComponent implements OnInit {
     this.router.navigate(['/edit-task-item/' + this._id]);
   }
   DeleteNews(event:any){
-    this._id = (String(event.srcElement.attributes.id));
-    console.log("Edit News: " + this._id.toString());
+    this._id = event.srcElement.attributes.id;
+    console.log("Edit News: " + this._id);
     this.newsService.deleteNews(this._id);
     
   }
