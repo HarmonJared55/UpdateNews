@@ -21,6 +21,7 @@ import { ImageSliderComponent } from './components/image-slider/image-slider.com
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { EditNewsComponent } from './components/EditNews/edit-news/edit-news.component';
 import { EditNewsItemComponent } from './components/EditNews/edit-news-item/edit-news-item.component';
+import { SportsComponent } from './components/sports/sports.component';
 import { LatestNewsComponent } from './components/latest-news/latest-news.component';
 
 @NgModule({
@@ -35,6 +36,11 @@ import { LatestNewsComponent } from './components/latest-news/latest-news.compon
     NavBarComponent,
     WeatherComponent,
     ContactUsComponent,
+    ImageSliderComponent,
+    HomePageComponent,
+    EditNewsComponent,
+    EditNewsItemComponent,
+    SportsComponent,
     ChatComponent
   ],
   imports: [
