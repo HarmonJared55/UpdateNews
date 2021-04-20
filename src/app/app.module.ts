@@ -41,19 +41,20 @@ import { LatestNewsComponent } from './components/latest-news/latest-news.compon
     EditNewsComponent,
     EditNewsItemComponent,
     SportsComponent,
-    ChatComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
+    ChatComponent,
     ContactUsComponent,
     ImageSliderComponent,
     HomePageComponent,
     EditNewsComponent,
     EditNewsItemComponent,
     LatestNewsComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
