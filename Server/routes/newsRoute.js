@@ -36,6 +36,14 @@ router.delete("/delete", (req, res) => {
     .catch();
 });
 
+router.get("/find", (req, res) => {
+  const{_id}=req.body;
+console.log("News Route: " + JSON.stringify(req.body));
+  News.findOne({_id})
+    .then((news) => res.json(news))
+    .catch();
+});
+
 router.post("/register", (req, res) => {
   const { errors, isValid } = validateNewsInput(req.body);
   if (!isValid) {
