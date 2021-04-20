@@ -38,23 +38,18 @@ const routes: Routes = [
     component: HomePageComponent
   },
   {
-    path:'edit-news',
-    component: EditNewsComponent,
-    canActivate:[AdminGuard]
-  },
-  {
     path: 'sports',
     component: SportsComponent
   },
   {
     path:'edit-news',
     component: EditNewsComponent,
-   //canActivate:[AdminGuard]
+   canActivate:[AdminGuard]
   },
   {
     path:'edit-news-item/:_id',
-    component: EditNewsItemComponent//,
-   //canActivate:[AdminGuard]
+    component: EditNewsItemComponent,
+   canActivate:[AdminGuard]
   },
 ];
 

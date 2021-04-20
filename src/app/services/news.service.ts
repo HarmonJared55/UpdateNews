@@ -34,17 +34,17 @@ export class NewsService {
   }
 
   updateNews(news:any):Observable<any>{
-    return this.httpClient.put(this.api + "update", news);
+    return this.httpClient.put(this.api + "/update", news);
   }
 
   deleteNews(_id:any):Observable<any>{
     console.log("News Service: " + _id);
-    return this.httpClient.delete(this.api + "delete/"+_id);
+    return this.httpClient.delete(this.api + "/delete/"+_id);
   }
 
   findNewsById(_id:any):Observable<any>{
-
     console.log("News Service: " + _id);
-    return this.httpClient.get(this.api + "find/"+_id);
+    return this.httpClient.get(this.api + "/find/"+_id);
   }
+
 }
