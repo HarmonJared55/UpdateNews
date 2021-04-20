@@ -30,6 +30,7 @@ export class EditNewsComponent implements OnInit {
       console.log(JSON.stringify(res));
       this.newsList=res;
     }) 
+    
   }
 
 }
