@@ -9,6 +9,7 @@ import { AdminGuard } from './guards/admin.guard';
 import { AboutUsComponent } from './components/pages/about-us/about-us.component';
 import { SportsComponent } from './components/sports/sports.component';
 
+import {AuthGuard} from './guards/auth.guard';
 const routes: Routes = [
   {
     path: '', 
@@ -28,7 +29,8 @@ const routes: Routes = [
   },
   {
     path: 'contact',
-    component: ContactUsComponent
+    component: ContactUsComponent,
+   
   },
   {
     path: 'homePage',
