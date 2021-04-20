@@ -26,6 +26,7 @@
     "ng-image-slider": "^2.7.0",
     "rxjs": "~6.6.0",
     "slick-carousel": "^1.8.1",
+    "socket.io": "^4.0.1",
     "socket.io-client": "^4.0.1",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
