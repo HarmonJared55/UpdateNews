@@ -18,8 +18,8 @@ api: string = 'http://localhost:3000/api/news/'
   }
 
   deleteNews(_id:any):Observable<any>{
-    console.log("News Service: " + _id._id);
-    return this.httpClient.delete(this.api + "delete",_id);
+    console.log("News Service: " + _id);
+    return this.httpClient.delete(this.api + "delete/"+_id);
   }
 
   findNewsById(_id:any):Observable<any>{
