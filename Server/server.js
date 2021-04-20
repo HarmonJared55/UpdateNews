@@ -34,4 +34,3 @@ app.use("/api/news/", news);
 app.listen(port, () => {
   console.log("server started at port: " + port);
 });
-//this is a test
