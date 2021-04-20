@@ -12,6 +12,10 @@ export class LatestNewsComponent implements OnInit {
 
   news:News[] = [];
 
+  urls:string[] = [];
+  urlOne:string;
+  urlTwo:string;
+  urlThree:string;
   constructor(private newsService:NewsService) {  }
 
   ngOnInit(): void {
@@ -25,9 +29,12 @@ export class LatestNewsComponent implements OnInit {
         let urlToImage = res[index].urlToImage;
         let publishedAt = new Date(res[index].publishedAt);
         let isSports = res[index].isSports;
+        this.urls.push(urlToImage);
         this.news.push(new News(id,title,description,url,urlToImage,publishedAt,isSports));
       }
-      console.log(this.news);
+      this.urlOne = this.urls[0];
+      this.urlTwo = this.urls[1];
+      this.urlThree = this.urls[2];
     })
 
   }
