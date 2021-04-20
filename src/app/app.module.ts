@@ -23,6 +23,7 @@ import { EditNewsComponent } from './components/EditNews/edit-news/edit-news.com
 import { EditNewsItemComponent } from './components/EditNews/edit-news-item/edit-news-item.component';
 import { SportsComponent } from './components/sports/sports.component';
 import { LatestNewsComponent } from './components/latest-news/latest-news.component';
+import { NewsSearchPipe } from './pipes/news-search.pipe';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { LatestNewsComponent } from './components/latest-news/latest-news.compon
     HomePageComponent,
     EditNewsComponent,
     EditNewsItemComponent,
-    LatestNewsComponent
+    LatestNewsComponent,
+    NewsSearchPipe
   ],
   imports: [
     BrowserModule,

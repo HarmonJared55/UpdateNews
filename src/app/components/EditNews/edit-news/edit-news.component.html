@@ -22,6 +22,8 @@
 
 <h1 style="margin:20px">Admin Edit News</h1>
 
+<!--input type="text" placeholder="Search..." class="form-control" [(ngModel)]="query"/-->
+
 <table class="table table-striped" style="text-align:center;margin:30px;width:75%;">
     <thead>
     <th>Title</th>
@@ -31,12 +33,13 @@
     <th></th>
 </thead>
 <tbody>
-    <tr *ngFor="let i of newsList">
+    <tr *ngFor="let i of newsList | newsSearch:query">
         <td>{{i.title}}</td>
         <td>{{i.description}}</td>
         <td>{{i.publishedAt | date:"mediumDate"}}</td>
         <td><a class="editbutton" id="{{i._id}}" routerLink="/edit-news-item/{{i._id}}">Edit</a></td>
-        <td><button class="deletebutton" id="{{i._id}}" (click)="DeleteNews($event)">Delete</button></td>
+        <td><button class="deletebutton" id="{{i._id}}" (click)="DeleteNews(i._id)">Delete</button></td>
         </tr>
     </tbody>
 </table>
+<div style="margin:150px"></div>

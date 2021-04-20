@@ -30,10 +30,11 @@ router.get("/latestThreeSports", (req, res) => {
     .catch();
 });
 
-router.delete("/delete", (req, res) => {
-  const {_id} = req.body;
-  News.remove({_id})
-    .then((news) => res.json(news))
+router.delete("/delete/:_id", (req, res) => {
+  const _id = req.params._id;
+  console.log("Deleting: " + _id);
+  News.deleteOne({_id})
+    .then(res.json("Deleted successfully"))
     .catch();
 });
 
@@ -47,7 +48,7 @@ router.get("/find/:_id", (req, res) => {
 
 router.put("/update", (req, res) => {
   console.log("Updating: " + JSON.stringify(req.body));
-  News.update({'_id':req.body._id}, {$set:{'title':req.body.title}})
+  News.update({'_id':req.body._id}, {$set:{'title':req.body.title, 'description':req.body.description}})
     .then((news) => res.json(news))
     .catch();
 });
