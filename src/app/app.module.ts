@@ -63,14 +63,7 @@ import { RegisterNewsComponent } from './components/EditNews/register-news/regis
     
     
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    NgImageSliderModule
-    
-  ],
+ 
   providers: [],
   bootstrap: [AppComponent]
 })
