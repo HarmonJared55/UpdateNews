@@ -17,7 +17,7 @@ export class AdminGuard implements CanActivate {
     console.log(decodedToken);
     if(decodedToken.isAdmin) return true;
     else {
-      this.router.navigate (['/login']);
+      this.router.navigate (['/home']);
       return false;
     }
   } else{

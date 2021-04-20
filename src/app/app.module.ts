@@ -24,6 +24,7 @@ import { SportsComponent } from './components/sports/sports.component';
 import { LatestNewsComponent } from './components/latest-news/latest-news.component';
 import { NewsSearchPipe } from './pipes/news-search.pipe';
 import { AgmCoreModule } from '@agm/core';
+import { RegisterNewsComponent } from './components/EditNews/register-news/register-news.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { AgmCoreModule } from '@agm/core';
     EditNewsComponent,
     EditNewsItemComponent,
     LatestNewsComponent,
-    NewsSearchPipe
+    NewsSearchPipe,
+    RegisterNewsComponent
   ],
   imports: [
     BrowserModule,
