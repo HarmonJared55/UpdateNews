@@ -38,8 +38,8 @@ export class NewsService {
   }
 
   deleteNews(_id:any):Observable<any>{
-    console.log("News Service: " + _id._id);
-    return this.httpClient.delete(this.api + "delete",_id);
+    console.log("News Service: " + _id);
+    return this.httpClient.delete(this.api + "delete/"+_id);
   }
 
   findNewsById(_id:any):Observable<any>{

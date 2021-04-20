@@ -11,23 +11,25 @@ import { NewsService } from 'src/app/services/news.service';
 export class EditNewsComponent implements OnInit {
   newsList:News[]=[];
   _id:String = "";
+  query:String = "";
   constructor(private newsService:NewsService, private router:Router) { }
 
   ngOnInit(): void {
     this.newsService.getAllNews().subscribe((res) => {
       console.log(JSON.stringify(res));
       this.newsList=res;
-    })
+    }) 
   }
-  EditNews(event:any){
-    this._id= event.srcElement.attributes.id;
-    this.router.navigate(['/edit-task-item/' + this._id]);
-  }
-  DeleteNews(event:any){
-    this._id = event.srcElement.attributes.id;
-    console.log("Edit News: " + this._id);
-    this.newsService.deleteNews(this._id);
-    
+  DeleteNews(id:String){
+    this._id = id;
+    console.log("Edit News: " + id);
+    this.newsService.deleteNews(this._id).subscribe((res) =>{
+      console.log(JSON.stringify(res));
+    });
+    this.newsService.getAllNews().subscribe((res) => {
+      console.log(JSON.stringify(res));
+      this.newsList=res;
+    }) 
   }
 
 }
