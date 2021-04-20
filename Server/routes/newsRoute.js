@@ -9,6 +9,13 @@ router.get("/all", (req, res) => {
     .catch();
 });
 
+router.delete("/delete", (req, res) => {
+  const {_id} = req.body;
+  News.remove({_id})
+    .then((news) => res.json(news))
+    .catch();
+});
+
 router.post("/register", (req, res) => {
   const { errors, isValid } = validateNewsInput(req.body);
   if (!isValid) {

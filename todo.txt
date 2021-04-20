@@ -1,0 +1,9 @@
+Login Page
+    Calvin - Verfiy functionality and style
+
+Homepage
+    3 latest new storys - Jared
+
+Edit News - Ethan
+
+chat box - karma

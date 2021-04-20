@@ -1,12 +1,12 @@
+<!--
 <nav class="navbar navbar-dark" style="background-color: #4d4d4d;">
    
     <div class="container-fluid">
      
-      <img src="https://i.pinimg.com/originals/8a/65/df/8a65dfa2da1976a82d27137557b0ad6a.jpg"
-      class="rounded-circle" width = "50" height = "50" alt="Logo">
+      <img src="https://i.pinimg.com/originals/8a/65/df/8a65dfa2da1976a82d27137557b0ad6a.jpg" class="rounded-circle" width = "50" height = "50" alt="Logo">
       
   
-      <a class="navbar-brand" href="#">Home</a>
+      <a class="navbar-brand" href="#" routerLink="/homePage" routerLinkActive=" active">Home</a>
      
      
       <a class="navbar-brand" href="#">Sports</a>
@@ -15,7 +15,50 @@
       <a class="navbar-brand" href="#">About Us</a>
      
 
-      <a class="navbar-brand" href="#">Contact Us</a>
+      <a class="navbar-brand" href="#" routerLink="/contact" routerLinkActive=" active">Contact Us</a>
      
     </div>
   </nav>
+-->
+<!--
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="https://i.pinimg.com/originals/8a/65/df/8a65dfa2da1976a82d27137557b0ad6a.jpg" class="rounded-circle" width = "50" height = "50" alt="Logo">
+    Update! 24x7
+  </a>
+  <div class="collapse navbar-collapse justify-content-right" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="navbar-brand" href="#" routerLink="/homePage" routerLinkActive=" active">Home</a>
+      <a class="navbar-brand" href="#">Sports</a>
+      <a class="navbar-brand" href="#">About Us</a>
+      <a class="navbar-brand" href="#" routerLink="/contact" routerLinkActive=" active">Contact Us</a>
+    </div>
+  </div>
+
+</nav>-->
+
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand space" routerLink="">
+    <img src="https://i.pinimg.com/originals/8a/65/df/8a65dfa2da1976a82d27137557b0ad6a.jpg" class="rounded-circle" width = "50" height = "50" alt="Logo">
+    Update! 24x7
+  </a>
+  <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="navbar-brand hover" href="#" routerLink="/homePage" routerLinkActive=" active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand hover" href="#">Sports</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand hover" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand hover" href="#" routerLink="/contact" routerLinkActive=" active">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand hover" href="#" routerLink="/login" routerLinkActive=" active">Login</a>
+          </li>
+      </ul>
+  </div>
+</nav>

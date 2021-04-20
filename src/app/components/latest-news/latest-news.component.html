@@ -1,0 +1,17 @@
+<app-image-slider></app-image-slider>
+<div class="row">
+    <div *ngFor="let story of news" class="col-sm-4">
+      <div class="card">
+        <div class="card-header">
+            <h5>{{story.title}}</h5>
+        </div>
+        <div class="card-body">
+          <a routerLink="/homePage">
+              <img class="col-sm-12" src="{{story.urlToImage}}"/>
+          </a>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
