@@ -1,8 +1,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 m-auto">
-      <h3 class="display-4 text-center">Login</h3>
+      <h3 class="sign">Login</h3>
       <form
+        class="sign"
         name="form"
         (ngSubmit)="f.form.valid && handleSubmit()"
         #f="ngForm"
@@ -50,12 +51,12 @@
           </div>
         </div>
         <div class="text-center">
-          <button class="btn btn-primary mr-1" (click)="handleSubmit()">Login</button>
+          <button class="submitButton" (click)="handleSubmit()">Login</button>
           <button
-            class="btn btn-danger"
+            class="submitButton"
             (click)="f.reset({}); submitted = false"
           >
-            RESET
+            Reset
           </button>
         </div>
       </form>

@@ -35,19 +35,21 @@ import { LatestNewsComponent } from './components/latest-news/latest-news.compon
     NavBarComponent,
     WeatherComponent,
     ContactUsComponent,
-    ChatComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
+    ChatComponent,
     ContactUsComponent,
     ImageSliderComponent,
     HomePageComponent,
     EditNewsComponent,
     EditNewsItemComponent,
     LatestNewsComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    NgImageSliderModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
