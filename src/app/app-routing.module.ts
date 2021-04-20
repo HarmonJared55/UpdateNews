@@ -10,6 +10,10 @@ import { AboutUsComponent } from './components/pages/about-us/about-us.component
 
 const routes: Routes = [
   {
+    path: '', 
+    component: HomePageComponent,
+  },
+  {
     path: 'login', 
     component: LoginComponent,
   },

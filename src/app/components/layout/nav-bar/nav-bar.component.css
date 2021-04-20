@@ -1,0 +1,24 @@
+.navbar-nav,
+.mr-auto {
+flex: 1;
+margin: auto !important;
+display: flex;
+justify-content: space-around;
+}
+
+.hover:hover{
+    background-color: darkgray;
+}
+
+nav{
+    background-color: lightgray;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+.space{
+    margin-left:10px;
+}
