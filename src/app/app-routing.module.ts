@@ -7,7 +7,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { EditNewsComponent } from './components/EditNews/edit-news/edit-news.component';
 import { AdminGuard } from './guards/admin.guard';
 import { AboutUsComponent } from './components/pages/about-us/about-us.component';
-
+import {AuthGuard} from './guards/auth.guard';
 const routes: Routes = [
   {
     path: '', 
@@ -27,7 +27,9 @@ const routes: Routes = [
   },
   {
     path: 'contact',
-    component: ContactUsComponent
+    component: ContactUsComponent,
+    canActivate: [AuthGuard],
+   
   },
   {
     path: 'homePage',

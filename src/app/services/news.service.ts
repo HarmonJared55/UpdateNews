@@ -6,14 +6,31 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class NewsService {
-api: string = 'http://localhost:3000/api/news/'
-  constructor(private httpClient:HttpClient) { }
+  api = 'http://localhost:3000/api/news';
+  constructor(private httpClient: HttpClient) { }
 
-  getAllNews():Observable<any>{
-    return this.httpClient.get(this.api + "all");
+  getAllNews(): Observable<any> {
+    return this.httpClient.get(this.api + '/all');
   }
 
-  getLatestThree():Observable<any>{
-    return this.httpClient.get(this.api + "latestThree")
+  getAllRegularNews(): Observable<any> {
+    return this.httpClient.get(this.api + '/allRegularNews');
   }
+
+  getAllSportsNews(): Observable<any>{
+    return this.httpClient.get(this.api + '/allSportsNews');
+  }
+
+  getLatestThree(): Observable<any>{
+    return this.httpClient.get(this.api + '/latestThree');
+  }
+
+  getLatestThreeSports(): Observable<any> {
+    return this.httpClient.get(this.api + '/latestThreeSports');
+  }
+
+  createNews(register: any): Observable<any> {
+    return this.httpClient.post(this.api + '/register', register);
+  }
+
 }

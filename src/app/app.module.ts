@@ -34,6 +34,7 @@ import { LatestNewsComponent } from './components/latest-news/latest-news.compon
     HeaderComponent,
     NavBarComponent,
     WeatherComponent,
+    ContactUsComponent,
     ChatComponent
   ],
   imports: [
