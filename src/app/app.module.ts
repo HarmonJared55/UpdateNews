@@ -20,6 +20,7 @@ import { ImageSliderComponent } from './components/image-slider/image-slider.com
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { EditNewsComponent } from './components/EditNews/edit-news/edit-news.component';
 import { EditNewsItemComponent } from './components/EditNews/edit-news-item/edit-news-item.component';
+import { SportsComponent } from './components/sports/sports.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { EditNewsItemComponent } from './components/EditNews/edit-news-item/edit
     ImageSliderComponent,
     HomePageComponent,
     EditNewsComponent,
-    EditNewsItemComponent
+    EditNewsItemComponent,
+    SportsComponent
   ],
   imports: [
     BrowserModule,

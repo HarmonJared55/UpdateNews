@@ -7,6 +7,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { EditNewsComponent } from './components/EditNews/edit-news/edit-news.component';
 import { AdminGuard } from './guards/admin.guard';
 import { AboutUsComponent } from './components/pages/about-us/about-us.component';
+import { SportsComponent } from './components/sports/sports.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,10 @@ const routes: Routes = [
     path:'edit-news',
     component: EditNewsComponent,
     canActivate:[AdminGuard]
+  },
+  {
+    path: 'sports',
+    component: SportsComponent
   }
 ];
 
