@@ -5,26 +5,13 @@ const News = require("../models/news");
 
 router.get("/all", (req, res) => {
   News.find()
-    .then((news) => res.json(news))
+    .then((newss) => res.json(newss))
     .catch();
 });
-router.get("/allRegularNews", (req, res) => {
-  News.find({"isSports":false})
-    .then((news) => res.json(news))
-    .catch();
-});
-router.get("/allSportsNews", (req, res) => {
-  News.find({"isSports":true})
-    .then((news) => res.json(news))
-    .catch();
-});
-router.get("/latestThree", (req, res) => {
-  News.find({"isSports":false}).sort({"publishedAt":-1}).limit(3)
-    .then((news) => res.json(news))
-    .catch();
-});
-router.get("/latestThreeSports", (req, res) => {
-  News.find({"isSports":true}).sort({"publishedAt":-1}).limit(3)
+
+router.delete("/delete", (req, res) => {
+  const {_id} = req.body;
+  News.remove({_id})
     .then((news) => res.json(news))
     .catch();
 });
@@ -41,7 +28,7 @@ router.post("/register", (req, res) => {
     url: req.body.url,
     urlToImage: req.body.urlToImage,
     publishedAt: req.body.publishedAt,
-    isSports: req.body.isSports
+    isSports: req.body.isSports,
   });
 
   newNews

@@ -15,33 +15,36 @@ export class WeatherComponent implements OnInit {
   weatherType!:string;
   temp!:string;
   humidity!:string;
+  iconCode!:string;
 
   tmrType!:string;
   tmrTempHigh!:string;
   tmrTempLow!:string;
   tmrHumidity!:string;
+  tmrCode!:string;
 
 
   constructor(private weatherService: WeatherService) { }
 
   ngOnInit(): void {
     this.weatherService.getWeather().subscribe((res) => {
-     
       this.city = JSON.stringify(res.name);
       this.weatherType = res.weather[0].description;
       this.temp = JSON.stringify(res.main.temp - 273.15);
       this.humidity = JSON.stringify(res.main.humidity);
-      
+      this.iconCode = res.weather[0].icon;
 
+      this.weatherType = this.weatherType.toUpperCase();
     });
 
     this.weatherService.getForcast().subscribe((res) => {
-      console.log(JSON.stringify(res.daily[0]))
-      console.log(JSON.stringify(res.daily[0].humidity));
       this.tmrTempLow = JSON.stringify(res.daily[0].temp.min - 273.15)
       this.tmrTempHigh = JSON.stringify(res.daily[0].temp.max - 273.15)
       this.tmrType = res.daily[0].weather[0].description;
       this.tmrHumidity = JSON.stringify(res.daily[0].humidity);
+      this.tmrCode = res.daily[0].weather[0].icon;
+
+      this.tmrType = this.tmrType.toUpperCase();
     });
   }
 
