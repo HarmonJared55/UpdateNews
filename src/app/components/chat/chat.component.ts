@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {io, Socket} from 'socket.io-client';
 
-const SOCKET_ENDPOINT = 'localhost:3000';
+const SOCKET_ENDPOINT = 'localhost:4000';
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',

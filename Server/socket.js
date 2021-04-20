@@ -11,6 +11,6 @@ io.on('connection', (socket)=>{
     socket.broadcast.emit('message-broadcast',msg);
   });
 });
-  http.listen(3000, () => {
-  console.log('listening on *:3000');
+  http.listen(4000, () => {
+  console.log('listening on *:4000');
 });
