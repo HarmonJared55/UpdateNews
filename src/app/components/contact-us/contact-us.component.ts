@@ -11,5 +11,9 @@ export class ContactUsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  myClickFunction() { 
+    //just added console.log which will display the event details in browser on click of the button.
+    alert("Email sent");
+    
+ }
 }
