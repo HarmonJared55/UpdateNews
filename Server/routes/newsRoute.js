@@ -5,17 +5,17 @@ const News = require("../models/news");
 const params = require("params");
 
 router.get("/all", (req, res) => {
-  News.find()
+  News.find().sort({"publishedAt":-1})
     .then((news) => res.json(news))
     .catch();
 });
 router.get("/allRegularNews", (req, res) => {
-  News.find({"isSports":false})
+  News.find({"isSports":false}).sort({"publishedAt":-1})
     .then((news) => res.json(news))
     .catch();
 });
 router.get("/allSportsNews", (req, res) => {
-  News.find({"isSports":true})
+  News.find({"isSports":true}).sort({"publishedAt":-1})
     .then((news) => res.json(news))
     .catch();
 });
@@ -42,6 +42,14 @@ router.get("/find/:_id", (req, res) => {
   const _id = req.params._id;
   console.log("News Route: " + _id);
   News.findOne({_id})
+    .then((news) => res.json(news))
+    .catch();
+}); 
+
+router.get("/findLimited/:count", (req, res) => {
+  const count = +req.params.count;
+  console.log("News Route: " + count)
+  News.find().sort({"publishedAt":-1}).limit(count)
     .then((news) => res.json(news))
     .catch();
 }); 
