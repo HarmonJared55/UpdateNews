@@ -50,6 +50,7 @@
               type="url"
               name="url"
               class="form-control"
+              url placeholder="url"
               [(ngModel)]="initial.url"
               #url="ngModel"
               [ngClass]="{ 'is-invalid': f.submitted && url.invalid }"
@@ -57,7 +58,7 @@
             />
             <div *ngIf="f.submitted && url.invalid" class="invalid-feedback">
               <div *ngIf="url.errors?.required">URL is required</div>
-              
+              <div *ngIf="url.errors.url"> invalid URL </div>
             </div>
           </div>
           <div class="form-group" style="margin-top:20px">
