@@ -47,6 +47,10 @@ export class NewsService {
     return this.httpClient.get(this.api + "/find/"+_id);
   }
 
+  findLimitedNews(count:number):Observable<any>{
+    console.log("News Service: " + this.api + "/findLimited/"+count);
+    return this.httpClient.get(this.api + "/findLimited/"+count);
+  }
   registerNews(model:any):Observable<any>{
     return this.httpClient.post(this.api + "/register",model);
   }

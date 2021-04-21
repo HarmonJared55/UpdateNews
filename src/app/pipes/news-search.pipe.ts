@@ -8,8 +8,8 @@ export class NewsSearchPipe implements PipeTransform {
   transform(value: any, ...args: any[]): any {
     if(typeof(args[0] === 'undefined')) return value;
     
-    return value.filter((news: { title: string; }) => {
-      return news.title.toUpperCase().indexOf(args[0].toUpperCase()) > -1;
+    return value.filter((news:any) => {
+      return news.description.toUpperCase().indexOf(args[0].toUpperCase()) > -1;
     });
   }
 

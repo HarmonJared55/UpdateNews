@@ -22,7 +22,27 @@
 
 <h1 style="margin:20px">Admin Edit News</h1>
 
-<!--input type="text" placeholder="Search..." class="form-control" [(ngModel)]="query"/-->
+<input type="text" placeholder="Search..." [(ngModel)]="query" style="margin-left:30px"/>
+
+<form  (ngSubmit)="updateNews()">
+    <label style="margin-left:30px;margin-top: 10px;margin-right: 10px;" for="newsVisible">Stories Visible:</label>
+    <select name="newsVisible" id="newsVisible" [(ngModel)] = "newsVisible">
+        <option value=""></option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+    <br>
+    <input type="submit" value="Update Table" class="btn btn-primary" style = "margin-left: 30px;margin-top: 20px;margin-bottom: 20px;">
+  </form>
+ 
 
 <table class="table table-striped" style="text-align:center;margin:30px;width:75%;">
     <thead>
@@ -41,5 +61,5 @@
         <td><button class="deletebutton" id="{{i._id}}" (click)="DeleteNews(i._id)">Delete</button></td>
         </tr>
     </tbody>
-</table><button class="btn btn-primary" routerLink="/register-news">Add new story!</button>
+</table><button class="btn btn-primary" routerLink="/register-news" style="margin-left:50px">Add new story!</button>
 <div style="margin:150px"></div>
