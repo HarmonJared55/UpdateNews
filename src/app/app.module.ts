@@ -26,6 +26,8 @@ import { NewsSearchPipe } from './pipes/news-search.pipe';
 import { AgmCoreModule } from '@agm/core';
 import { LogoutComponent } from './components/auth/logout/logout.component';
 
+import { CustomFormsModule } from 'ng2-validation';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,13 +52,15 @@ import { LogoutComponent } from './components/auth/logout/logout.component';
     EditNewsItemComponent,
     LatestNewsComponent,
     NewsSearchPipe,
-    LogoutComponent
+    LogoutComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    CustomFormsModule,
     NgImageSliderModule,
     AgmCoreModule.forRoot({ apiKey: 'AIzaSyD1kPG9I5B9X_ew1SddKZ3QFALTPLB4pIk' })
     
