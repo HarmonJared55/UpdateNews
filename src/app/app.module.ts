@@ -25,6 +25,7 @@ import { LatestNewsComponent } from './components/latest-news/latest-news.compon
 import { NewsSearchPipe } from './pipes/news-search.pipe';
 import { AgmCoreModule } from '@agm/core';
 import { RegisterNewsComponent } from './components/EditNews/register-news/register-news.component';
+import { LogoutComponent } from './components/auth/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { RegisterNewsComponent } from './components/EditNews/register-news/regis
     LatestNewsComponent,
     NewsSearchPipe,
     RegisterNewsComponent,
-    LatestNewsComponent
+    LatestNewsComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
