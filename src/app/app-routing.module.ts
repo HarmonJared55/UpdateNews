@@ -13,6 +13,7 @@ import { EditNewsItemComponent } from './components/EditNews/edit-news-item/edit
 import {AuthGuard} from './guards/auth.guard';
 import { RegisterNewsComponent } from './components/EditNews/register-news/register-news.component';
 import { ChatComponent } from './components/chat/chat.component';
+import { LogoutComponent } from './components/auth/logout/logout.component';
 const routes: Routes = [
   {
     path: '', 
@@ -58,9 +59,9 @@ const routes: Routes = [
    canActivate:[AdminGuard]
   },
   {
-    path:'register-news',
-    component: RegisterNewsComponent,
-   canActivate:[AdminGuard]
+    path:'logout',
+    component: LogoutComponent,
+   
   },
 ];
 
