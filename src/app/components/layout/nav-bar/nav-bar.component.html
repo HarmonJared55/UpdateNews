@@ -57,7 +57,14 @@
             <a class="navbar-brand hover" href="#" routerLink="/contact" routerLinkActive=" active">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="navbar-brand hover" href="#" routerLink="/login" routerLinkActive=" active">Login</a>
+            <a class="navbar-brand hover" href="#" routerLink="/edit-news" routerLinkActive=" active"  (click)="submit()"
+            *ngIf="data == 'true'">Edit News</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand hover" href="#" routerLink="/login" routerLinkActive=" active"  *ngIf="data == ''">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand hover" href="#" routerLink="/logout" routerLinkActive=" active"  *ngIf="data == 'true' || data == 'false'">Logout</a>
           </li>
       </ul>
   </div>

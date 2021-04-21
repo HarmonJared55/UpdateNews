@@ -11,6 +11,7 @@ import { SportsComponent } from './components/sports/sports.component';
 import { EditNewsItemComponent } from './components/EditNews/edit-news-item/edit-news-item.component';
 
 import {AuthGuard} from './guards/auth.guard';
+import { LogoutComponent } from './components/auth/logout/logout.component';
 const routes: Routes = [
   {
     path: '', 
@@ -50,6 +51,11 @@ const routes: Routes = [
     path:'edit-news-item/:_id',
     component: EditNewsItemComponent,
    canActivate:[AdminGuard]
+  },
+  {
+    path:'logout',
+    component: LogoutComponent,
+   
   },
 ];
 
