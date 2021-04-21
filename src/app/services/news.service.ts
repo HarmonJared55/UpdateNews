@@ -47,4 +47,8 @@ export class NewsService {
     return this.httpClient.get(this.api + "/find/"+_id);
   }
 
+  registerNews(model:any):Observable<any>{
+    return this.httpClient.post(this.api + "/register",model);
+  }
+
 }

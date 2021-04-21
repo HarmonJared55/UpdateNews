@@ -24,6 +24,7 @@ import { SportsComponent } from './components/sports/sports.component';
 import { LatestNewsComponent } from './components/latest-news/latest-news.component';
 import { NewsSearchPipe } from './pipes/news-search.pipe';
 import { AgmCoreModule } from '@agm/core';
+import { RegisterNewsComponent } from './components/EditNews/register-news/register-news.component';
 import { LogoutComponent } from './components/auth/logout/logout.component';
 
 import { CustomFormsModule } from 'ng2-validation';
@@ -52,8 +53,9 @@ import { CustomFormsModule } from 'ng2-validation';
     EditNewsItemComponent,
     LatestNewsComponent,
     NewsSearchPipe,
-    LogoutComponent,
-    
+    RegisterNewsComponent,
+    LatestNewsComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +66,9 @@ import { CustomFormsModule } from 'ng2-validation';
     NgImageSliderModule,
     AgmCoreModule.forRoot({ apiKey: 'AIzaSyD1kPG9I5B9X_ew1SddKZ3QFALTPLB4pIk' })
     
+    
   ],
+ 
   providers: [],
   bootstrap: [AppComponent]
 })
