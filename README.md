@@ -1,4 +1,4 @@
-# NewsFrontent
+# NewsFrontend
 
 # To run
 1) Start MongoDB server on localhost
