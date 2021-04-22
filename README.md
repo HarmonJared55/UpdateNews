@@ -1,27 +1,15 @@
-# NewsFrontend
+# NewsFrontent
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
+# To run
+1) Start MongoDB server on localhost
+2) Navigate to main project directory and run `npm i`
+3) Navigate to Server Folder and run `npm i`
+4) run socket.js and server.js in sepertate terminals
+5) run the command `npx ng serve -o` in the main project directory
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#Authors
+Jared Harmon
+Anik Muhib
+Ethan Duff
+Calvin Ng
+Karma Lama
