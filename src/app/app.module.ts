@@ -28,8 +28,6 @@ import { RegisterNewsComponent } from './components/EditNews/register-news/regis
 import { LogoutComponent } from './components/auth/logout/logout.component';
 import { CustomFormsModule } from 'ng2-validation';
 
-import { CustomFormsModule } from 'ng2-validation';
-
 @NgModule({
   declarations: [
     AppComponent,
